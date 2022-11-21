@@ -1,0 +1,192 @@
+[
+  {
+    "label": "授权管理",
+    "api": "auth",
+    "path": "/auth",
+    "icon": "key2Line",
+    "redirect": "/auth/order",
+    "children": [
+      {
+        "label": "订单管理",
+        "api": "order/list",
+        "path": "/auth/order",
+        "icon":  "attachment2",
+        "children": [
+          {"label": "创建订单", "api": "order/create"},
+          {"label": "订单详情", "api": "order/details"},
+          {"label": "订单升级", "api": "order/upgrade"},
+          {"label": "财务复核", "api": "order/review"},
+          {"label": "总经理审批", "api": "order/review"},
+          {"label": "订单撤销", "api": "order/revoke"},
+          {"label": "删除订单", "api": "order/del"},
+          {"label": "查看设备详情", "api": "order/details"}
+        ]
+      },
+      {
+        "label": "授权记录",
+        "api": "licence/list",
+        "path": "/auth/licence",
+        "icon":  "historyFill",
+        "children": [
+          {"label": "更新状态",  "api": "licence/set-status"},
+          {"label": "删除授权", "api": "licence/del"}
+        ]
+      }
+    ]
+  },
+  {
+    "label": "知识图谱",
+    "api": "kl",
+    "path": "/kl",
+    "icon": "organizationChart",
+    "redirect": "/kl/syndrome",
+    "children": [
+      {
+        "label": "综合征",
+        "api": "kl-syndrome/tree",
+        "path": "/kl/syndrome",
+        "icon": "guide-icon",
+        "children": [
+          {"label": "添加", "api": "kl-syndrome/add"},
+          {"label": "编辑", "api": "kl-syndrome/edit"},
+          {"label": "设置状态", "api": "kl-syndrome/set-status"},
+          {"label": "删除", "api": "kl-syndrome/del"}
+        ]
+      },
+      {
+        "label": "特征",
+        "api": "kl-feature/tree",
+        "path": "/kl/feature",
+        "icon": "paperclip-icon",
+        "children": [
+          {"label": "添加", "api": "kl-feature/add"},
+          {"label": "编辑", "api": "kl-feature/edit"},
+          {"label": "设置状态", "api": "kl-feature/set-status"},
+          {"label": "删除", "api": "kl-feature/del"}
+        ]
+      },
+      {
+        "label": "版本管理",
+        "api": "kl-version/list",
+        "path": "/kl/version",
+        "icon": "operation-icon",
+        "children": [
+          {"label": "创建版本", "api": "kl-version/add"},
+          {"label": "下载数据包", "api": "kl-version/download"},
+          {"label": "删除版本", "api": "kl-version/del"}
+        ]
+      }
+    ]
+  },
+  {
+    "label": "硬件初始化",
+    "api": "init",
+    "path": "/init",
+    "redirect": "/init/ukey",
+    "icon": "usb-line",
+    "children": [
+      {
+        "label": "U-KEY管理",
+        "api": "ukey/list",
+        "path": "/init/ukey",
+        "icon": "remote-control-line",
+        "children": [
+          {"label": "添加U-Key", "api": "ukey/add"},
+          {"label": "更新U-Key状态", "api": "ukey/set-status"},
+          {"label": "删除U-Key", "api": "ukey/del"}
+        ]
+      },
+      {
+        "label": "主任秘钥管理",
+        "api": "leader-key/list",
+        "path": "/init/leader",
+        "icon": "unsplash-line",
+        "children": [
+          {"label": "添加主任秘钥", "api": "leader-key/add"},
+          {"label": "更新主任秘钥状态", "api": "leader-key/set-status"},
+          {"label": "删除主任秘钥", "api": "leader-key/del"}
+        ]
+      }
+    ]
+  },
+  {
+    "label": "设备管理",
+    "api": "device",
+    "path": "/device",
+    "redirect": "/device/server",
+    "icon": "broadcast-line",
+    "children": [
+      {
+        "label": "服务器",
+        "api": "licence/list",
+        "path": "/device/server",
+        "icon": "bug-line",
+        "children": []
+      },
+      {
+        "label": "客户端",
+        "api": "licence/list",
+        "path": "/device/client",
+        "icon": "fingerprint-fill",
+        "children": []
+      },
+      {
+        "label": "版本管理",
+        "api": "version/list",
+        "path": "/device/version",
+        "icon": "node-tree",
+        "children": [
+          {"label": "添加", "api": "version/add"},
+          {"label": "编辑", "api": "version/edit"},
+          {"label": "设置状态", "api": "version/set-status"},
+          {"label": "删除", "api": "version/set-del"}
+        ]
+      }
+    ]
+  },
+  {
+    "label": "系统管理",
+    "api": "sys",
+    "path": "/sys",
+    "redirect": "/sys/admin",
+    "icon": "setting",
+    "children": [
+      {
+        "label": "用户管理",
+        "api": "sys-admin/list",
+        "path": "/sys/admin",
+        "icon": "admin-line",
+        "children": [
+          {"label": "添加", "api": "sys-admin/add"},
+          {"label": "编辑", "api": "sys-admin/edit"},
+          {"label": "设置状态", "api": "sys-admin/set-status"},
+          {"label": "删除", "api": "sys-admin/del"}
+        ]
+      },
+      {
+        "label": "角色管理",
+        "api": "sys-role/list",
+        "path": "/sys/role",
+        "icon": "virus-line",
+        "children": [
+          {"label": "添加", "api": "sys-role/add"},
+          {"label": "编辑", "api": "sys-role/edit"},
+          {"label": "设置状态", "api": "sys-role/set-status"},
+          {"label": "删除", "api": "sys-role/del"}
+        ]
+      },
+      {
+        "label": "单位管理",
+        "api": "hospital/list",
+        "path": "/sys/hospital",
+        "icon": "hospital-line",
+        "children": [
+          {"label": "添加", "api": "hospital/add"},
+          {"label": "编辑", "api": "hospital/edit"},
+          {"label": "设置状态", "api": "hospital/set-status"},
+          {"label": "删除", "api": "hospital/del"}
+        ]
+      }
+    ]
+  }
+]

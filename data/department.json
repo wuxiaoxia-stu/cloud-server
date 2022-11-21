@@ -1,0 +1,78 @@
+[
+  {
+    "label": "产品研发中心",
+    "value": "PD",
+    "children": [
+      {
+        "label": "产品经理",
+        "value": "productManager"
+      },
+      {
+        "label": "开发工程师",
+        "value": "developmentEngineer"
+      },
+      {
+        "label": "运维工程师",
+        "value": "operationEngineer"
+      },
+      {
+        "label": "测试工程师",
+        "value": "testEngineer"
+      }
+    ]
+  },
+  {
+    "label": "运营中心",
+    "value": "PO",
+    "children": [
+      {
+        "label": "运营经理",
+        "value": "operationManager"
+      },
+      {
+        "label": "运营主管",
+        "value": "operationLeader"
+      },
+      {
+        "label": "运营人员",
+        "value": "operationUser"
+      }
+    ]
+  },
+  {
+    "label": "销售中心",
+    "value": "SD",
+    "children": [
+      {
+        "label": "销售经理",
+        "value": "slesManager"
+      },
+      {
+        "label": "销售主管",
+        "value": "slesLeader"
+      },
+      {
+        "label": "销售人员",
+        "value": "slesUser"
+      }
+    ]
+  },
+  {
+    "label": "财务中心",
+    "value": "FD",
+    "children": [
+      {
+        "label": "财务经理",
+        "value": "financeManager"
+      },
+      {
+        "label": "财务主管",
+        "value": "financeLeader"
+      },
+      {
+        "label": "财务人员",
+        "value": "financeUser"
+      }
+    ]
+  }
+]

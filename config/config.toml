@@ -1,0 +1,54 @@
+# HTTP Server.
+[server]
+    Domain      = "http://192.168.1.189:9005/"
+	Address     = ":9005"
+	ServerRoot  = "public"
+	ServerAgent = "aiyun_cloud_srv"
+	LogPath     = "./log/srv"
+
+    graceful        = true              # 是否开启平滑重启特性，开启时将会在本地增加10000的本地TCP端口用于进程间通信。默认false
+    gracefulTimeout = 2                 # 父进程在平滑重启后多少秒退出，默认2秒。若请求耗时大于该值，可能会导致请求中断
+
+    maxHeaderBytes    = "20KB"
+    clientMaxBodySize = "100MB"
+    Debug       = true
+
+# Database.
+[database]
+#    link  = "pgsql: user=postgres password=postgres host=127.0.0.1 port=5432 dbname=aiyun_cloud sslmode=disable"
+    type    = "pgsql"
+#    host    = "101.33.251.139"
+    host    = "127.0.0.1"
+    port    = "5432"
+    user    = "postgres"
+    pass    = "postgres"
+    name    = "aiyun_cloud"
+    sslmode = "sslmode"
+    prefix = "lpm_"
+    debug = true
+    # Database logger.
+    [database.logger]
+        Path   = "./log/sql"
+        Level  = "all"
+        Stdout = true
+
+# Redis.
+[redis]
+    open = true #是否开启 redis 缓存 若不开启使用gchache缓存方式
+    default = "127.0.0.1:6379,1?idleTimeout=20&maxActive=100"
+
+# Logger.
+[logger]
+    Path        = "./log/qc"
+    Level       = "all"
+    Stdout      = true
+    Expire      = 30  # 单位/天，日志存活时间，到期后自动删除
+
+# Jwt.
+[jwt]
+    expires = 43200             # 过期时间 单位秒
+    sign = "aiyun_cloud_srv"    # 秘钥rou
+
+# 人机大赛、质控考核配置
+[exam]
+    pass = "666666"    # 登录密码
